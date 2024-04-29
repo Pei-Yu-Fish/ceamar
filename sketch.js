@@ -1,3 +1,4 @@
+var radioElement
 var captureGraphics
 var capture_w=640
 var capture_h=480
@@ -11,6 +12,14 @@ function setup() {
   captureGraphics.translate(capture_w,0)
   captureGraphics.scale(-1,1)
   capture.hide()
+//----------------------
+  var radioElement=createRadio();
+  radioElement.position(width/2-300,2)
+  radioElement.option("方塊")
+  radioElement.option("圓圈")
+  radioElement.option("color","220")
+  // radioElement.style("")
+
 }
 
 function draw() {
@@ -23,7 +32,12 @@ function draw() {
       for(var y=0;y<captureGraphics.height;y=y+span){
         var pixel=captureGraphics.get(x,y)
         fill(pixel)
-        rect(x,y,span)
+        if(removeElements.value()=="方塊"){
+            rect(x,y,span)
+        }
+        if(removeElements.value()=="圓圈"){
+            ellipse(x,y,span)
+        }
       }
     }
   pop()
