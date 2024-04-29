@@ -17,7 +17,7 @@ function setup() {
   radioElement.position(width/2-300,2)
   radioElement.option("方塊")
   radioElement.option("圓圈")
-  radioElement.option("color","#960018")
+  radioElement.style("color","#960018")
   // radioElement.style("0")
 
 }
