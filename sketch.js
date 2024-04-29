@@ -18,7 +18,7 @@ function setup() {
   radioElement.option("方塊")
   radioElement.option("圓圈")
   radioElement.style("color","#960018")
-  // radioElement.style("0")
+  // radioElement.style("")
 
 }
 
@@ -32,12 +32,12 @@ function draw() {
       for(var y=0;y<captureGraphics.height;y=y+span){
         var pixel=captureGraphics.get(x,y)
         fill(pixel)
-        if(removeElements.value()=="方塊"){
-            rect(x,y,span)
-        }
-        if(removeElements.value()=="圓圈"){
+        // if(removeElements.value()=="方塊"||radioElement.value()==""){
+        //     rect(x,y,span)
+        // }
+        // if(removeElements.value()=="圓圈"){
             ellipse(x,y,span)
-        }
+        // }
       }
     }
   pop()
